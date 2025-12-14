@@ -1,0 +1,554 @@
+body {
+  font-family: "Nunito";
+  font-style: normal;
+  background-color: #f9fbff;
+}
+
+.btn {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  color: #F9FBFF;
+  transition: all 0.4s ease-out;
+}
+
+.btn:hover {
+  background: #F9F5E8;
+  color: #232C38;
+}
+
+.button-burger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+}
+
+.button-burger span:nth-child(2),
+.button-burger span:last-child {
+  margin-top: 25%;
+}
+
+.link {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(100%);
+  transition: transform 0.5s ease-out;
+}
+
+.menu.show {
+  transform: translate(0%);
+}
+
+.menu-links {
+  margin-bottom: 30px;
+  opacity: 0.7;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: #EDF0F5;
+}
+
+.menu-links:hover,
+.menu-links.active {
+  opacity: 1;
+}
+
+.slider-nav-button {
+  font-size: 20px;
+  width: 48px;
+  height: 48px;
+  background-color: #c7a17a;
+  border-radius: 50%;
+  color: #F9FBFF;
+}
+
+.slider-nav-button::after {
+  display: none;
+}
+
+.swiper-button-disabled {
+  opacity: 0 !important;
+}
+
+.header-text,
+.contact-header,
+.cart-header {
+  padding: 15px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 32px;
+}
+
+.header-text.accent {
+  color: #f9fbff;
+  background-color: #c7a17a;
+}
+
+.header-text.accent ~ .blank {
+  background-color: #c7a17a;
+}
+
+.header-text {
+  background-color: #f9fbff;
+  animation: show 1s ease-in-out 1s backwards;
+}
+
+.blank {
+  background-color: #f9fbff;
+  animation: show 1s ease-in-out 1s backwards, slideout 1s ease 1.8s forwards;
+}
+
+@keyframes show {
+  from {
+    transform: translateX(-130%);
+  }
+
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slideout {
+  from {
+    transform: translateX(0%);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}
+
+.promo-video {
+  background-image: url(/assets/images/promo_video.webp);
+  background-size: auto 120%;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.play-button {
+  margin: 80% 0 0 50%;
+  transform: translate(-50%);
+  width: 54px;
+  height: 54px;
+  background-color: #FFF;
+  position: relative;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0px 4px 24px rgba(74, 74, 74, 0.5);
+}
+
+.play-button svg {
+  margin: 50%;
+  transform: translate(-50%, -40%);
+}
+
+section {
+  padding-top: 160px;
+  padding-bottom: 128px;
+}
+
+section h2 {
+  position: relative;
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 34px;
+}
+
+section h2 span {
+  width: 100%;
+  display: inline-block;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.features h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.features p {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.features h3,
+.features p {
+  color: #232C38;
+}
+
+.product-price {
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.product-price span {
+  display: inline-block;
+  margin-left: 20px;
+  vertical-align: bottom;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  text-decoration-line: line-through;
+  color: #415167;
+}
+
+.product-title {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #232C38;
+}
+
+#cart .product-title {
+  margin-bottom: 0;
+}
+
+.total-of-order {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.product-description {
+  margin-bottom: 32px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  height: 66px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+  color: #151D28;
+}
+
+.product-remove {
+  font-size: 18px;
+  line-height: 16px;
+  color: #ff6347;
+}
+
+.product-card,
+.short-product-card {
+  background-color: #FFF;
+  transition: box-shadow 0.3s ease, opacity 0.3s ease;
+}
+
+.product-card:hover:not(.hide),
+.short-product-card:hover:not(.hide) {
+  box-shadow: 0px 4px 24px #cdcdcd;
+}
+
+.product-card.hide,
+.short-product-card.hide {
+  opacity: 0.5;
+}
+
+.coffee-combo-products {
+  padding: 20px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.giftset {
+  background: #edf0f5;
+  background: linear-gradient(90deg, #edf0f5 76.8%, #f9fbff 76.8%, #f9fbff 100%);
+}
+
+.giftset-collections {
+  position: relative;
+}
+
+.giftset-thumb {
+  max-width: 234px;
+}
+
+.giftset-content {
+  font-size: 0;
+}
+
+.giftset-content .price {
+  margin-bottom: 12px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.giftset-content .title {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #232C38;
+}
+
+.giftset-content .description {
+  margin-bottom: 24px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.giftset-content .options img {
+  padding-right: 14px;
+  vertical-align: bottom;
+}
+
+.giftset-content .options .type {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.giftset-content .options .value {
+  display: block;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.giftset-content .btn,
+.giftset-content .link {
+  display: inline-block;
+}
+
+.giftset-tabs .tabs-menu {
+  display: flex;
+  flex-direction: row;
+  position: static;
+}
+
+.giftset-tabs .tab {
+  background-color: #B9C4DA;
+  padding: 38px 45px;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 34px;
+  color: #415167;
+  opacity: 0.4;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.giftset-tabs .tab.active,
+.giftset-tabs .tab:hover {
+  opacity: 1;
+  background-color: #fff;
+}
+
+.coffee-products {
+  position: relative;
+  overflow: hidden;
+}
+
+.coffee-products .short-product {
+  max-width: 235px;
+}
+
+.coffee-products .short-product-card {
+  flex-direction: column;
+  margin-bottom: 32px;
+}
+
+.coffee-products .product-thumb {
+  max-width: 235px;
+  max-height: 256px;
+  background-color: #EDF0F5;
+}
+
+.coffee-products .product-content {
+  padding: 1rem;
+}
+
+.coffee-products .short-product-card {
+  display: flex;
+}
+
+.coffee-products .product-taste-description {
+  margin-bottom: 18px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.contact {
+  background: linear-gradient(90deg, #edf0f5 76.8%, #f9fbff 76.8%, #f9fbff 100%);
+}
+
+.contact h2 {
+  color: #151D28;
+}
+
+.contact .contact-text {
+  color: #0c213e;
+  margin-bottom: 8px;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.contact .contact-text span {
+  display: block;
+  font-weight: 600;
+}
+
+@media screen and (min-width: 390px) {
+  .header-text,
+  .contact-header,
+  .cart-header {
+    font-size: 32px;
+    line-height: 40px;
+  }
+}
+
+@media screen and (min-width: 568px) {
+  .play-button {
+    margin-top: 50%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header-text,
+  .contact-header,
+  .cart-header {
+    font-size: 44px;
+    line-height: 56px;
+  }
+
+  .giftset-content .options * {
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 882px) and (orientation: landscape) {
+  .promo-video {
+    background-size: auto;
+  }
+}
+
+@media screen and (min-width: 882px) {
+  .coffee-combo {
+    background: linear-gradient(90deg, #f9fbff 76.8%, #415167 76.8%, #415167 100%);
+  }
+
+  .coffee {
+    background: linear-gradient(90deg, #415167 0%, #415167 23%, #f9fbff 23%);
+  }
+
+  .coffee-products .short-product {
+    max-width: 560px;
+  }
+
+  .coffee-products .short-product-card {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .button-burger {
+    display: none;
+  }
+
+  .menu {
+    position: absolute;
+    transform: translate(0%);
+  }
+
+  .header-text,
+  .contact-header,
+  .cart-header {
+    font-size: 54px;
+    line-height: 70px;
+  }
+
+  section {
+    padding-top: 68px;
+  }
+
+  .giftset-thumb img {
+    transform: translate(-50%, 70%) scale(1.8);
+  }
+
+  .giftset-content {
+    max-width: 558px;
+  }
+
+  .giftset-tabs {
+    max-width: 90px;
+  }
+
+  .giftset-tabs .tabs-menu {
+    flex-direction: column;
+  }
+
+  .giftset-tabs .tab {
+    padding: 65px 36px;
+  }
+
+  .coffee-products .product-content {
+    padding: 2.5rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .giftset-content {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  .header-text,
+  .contact-header,
+  .cart-header {
+    font-size: 68px;
+    line-height: 88px;
+  }
+
+  .play-button {
+    width: 94px;
+    height: 94px;
+  }
+
+  .play-button svg {
+    width: 32px;
+    height: 34px;
+    margin: 50% 0 0 50%;
+    transform: translate(-45%, -60%);
+  }
+}
+
+@media screen and (min-width: 2100px) {
+  .promo-video {
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .giftset-content .btn {
+    margin-bottom: 24px;
+  }
+}
